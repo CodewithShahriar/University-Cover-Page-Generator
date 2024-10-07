@@ -26,25 +26,31 @@
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your university name</p>
                     <datalist id="universityList">
                         <option value="Atish Dipankar University of Science and Technology" data-logo="image/adust.jpeg"></option>
+                        <option value="International University of Business Agriculture and Technology" data-logo="image/iubat.png"></option>
+                        <option value="Uttara University" data-logo="image/uu.png"></option>
                     </datalist>
-    
+
                     <label for="pdfName">PDF name(optional):</label>
                     <input type="text" class="demo-input w-full" placeholder="Joy_241-0200-203" id="pdfName">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter the pdf name</p>
-    
-                    <label for="coverType">Assignment/Lab Report No with Title:(optional)</label>
-                    <input type="text" class="demo-input w-full" placeholder="ASSIGNMENT NO 1" id="coverType">
-                    <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter the assignment/lab report number with title</p>
 
-    
+                    <label for="coverType">Cover Page Type:</label>
+                    <input type="text" class="demo-input w-full" placeholder="ASSIGNMENT" id="coverType" list="coverTypeList">
+                    <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your cover page type </p>
+                    <datalist id="coverTypeList">
+                        <option value="ASSIGNMENT"></option>
+                        <option value="LAB REPORT"></option>
+                        <option value="PROJECT"></option>
+                    </datalist>
+
                     <label for="coverTitle">Title:</label>
                     <input type="text" class="demo-input w-full" placeholder="Implementing Inheritance in OOP" id="coverTitle">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your cover page title </p>
-    
+
                     <label for="courseTitle">Course Title</label>
                     <input type="text" class="demo-input w-full" placeholder="Object Oriented Programming" id="courseTitle">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your course title </p>
-        
+
                     <label for="courseCode">Course Id</label>
                     <input type="text" class="demo-input w-full" placeholder="CSE 212" id="courseCode">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your course code </p>
@@ -56,7 +62,7 @@
                     <label for="teacherName">Teacher's Name</label>
                     <input type="text" class="demo-input w-full" placeholder="Mahmudur Rahman Roni" id="teacherName">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your teacher's name </p>
-    
+
                     <label for="designation">Teacher's Designation:</label>
                     <input type="text" class="demo-input w-full" placeholder="Lecturer" id="designation" list="teacherDesignation">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your teacher's designation </p>
@@ -77,7 +83,7 @@
                         <option value="Department Head"></option>
                         <option value="Dean"></option>
                     </datalist>
-    
+
                     <label for="teacherDepartment">Teacher's Department:</label>
                     <input type="text" class="demo-input w-full" placeholder="Computer Science and Engineering" id="teacherDepartment" list="departmentList">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your teacher's department name</p>
@@ -106,19 +112,19 @@
                     <label for="studentName">Student Name:</label>
                     <input type="text" class="demo-input w-full" placeholder="Joyant Sheikhar Gupta Joy" id="studentName">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your name </p>
-    
+
                     <label for="studentId">Student Id: </label>
                     <input type="text" class="demo-input w-full" placeholder="241-0200-203" id="studentId">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your sudent id</p>
-    
+
                     <label for="studentBatch">Batch No:</label>
                     <input type="text" class="demo-input w-full" placeholder="241" id="studentBatch">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your batch no</p>
-    
+
                     <label for="section">Section:</label>
                     <input type="text" class="demo-input w-full" placeholder="A" id="section">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your section</p>
-    
+
                     <label for="session">Session:</label>
                     <input type="text" class="demo-input w-full" placeholder="Fall" id="session" list="sessionList">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your session</p>
@@ -127,7 +133,7 @@
                         <option value="Summer"></option>
                         <option value="Fall"></option>
                     </datalist>
-    
+
                     <label for="department">Department of:</label>
                     <input type="text" class="demo-input w-full" placeholder="Computer Science and Engineering" id="department" list="departmentList">
                     <p class="text-sm text-slate-950 mb-3 font-medium italic">• enter your department name</p>
@@ -135,7 +141,7 @@
                         <option value="Computer Science and Engineering"></option>
                         <option value="Electrical and Electronic Engineering"></option>
                     </datalist>
-    
+
                     <label for="submissionDate">Date of Submission:</label>
                     <input type="date" id="submissionDate">
                     <p class="text-sm text-slate-950 font-medium italic">• enter the submission date</p>
@@ -156,14 +162,14 @@
                         <p class="leading-tight">Title: <span id="coverTitleText"></span></p>
                         <p class="leading-tight">Course Title: <span id="courseTitleText"></span></p>
                         <p class="leading-tight">Course Code: <span id="courseCodeText"></span></p>
-        
+
                         <div class="mt-5">
                             <p class="font-semibold">Submitted To</p>
                             <p class="leading-tight"><span id="teacherNameText"></span></p>
                             <p class="leading-tight"><span id="designationText"></span></p>
                             <p class="leading-tight">Department of <span id="teacherDepartmentText"></span></p>
                         </div>
-        
+
                         <div class="mt-5">
                             <p class="font-semibold">Submitted By</p>
                             <p class="leading-tight"><span id="studentNameText"></span></p>
@@ -172,24 +178,19 @@
                             <p class="leading-tight">Session: <span id="sessionText"></span></p>
                             <p class="leading-tight">Department of <span id="departmentText"></span></p>
                         </div>
-                        
+
                         <div class="mt-1 pb-4">
                             <p>Submission Date: <span id="submissionDateText"></span></p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
+
     </div>
 
-    <footer class="footer bg-gray-900 text-white text-center py-3">
-        <p>© All rights reserved. Developed by Joyant Sheikhar Gupta Joy</p>
-    </footer>
-    
     <script src="scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
-</html>

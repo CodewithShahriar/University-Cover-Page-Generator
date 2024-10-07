@@ -23,19 +23,6 @@
     color: black;
 }
 .output-content p{
+    font-size: 12px;
     font-size: 11px;
 }
-
-.footer {
-    position: relative; /* You can change this to fixed for a sticky footer */
-    bottom: 0;
-    width: 100%;
-    background-color: #1a202c; /* Dark gray background */
-    color: white; /* White text */
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
