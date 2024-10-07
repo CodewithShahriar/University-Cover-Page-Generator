@@ -17,9 +17,11 @@ function updateContent() {
     const fields = ['university', 'department', 'courseTitle', 'courseCode', 'coverType', 'coverTitle', 'teacherName', 'designation', 'teacherDepartment', 'studentName', 'studentId', 'studentBatch', 'section', 'session'];
     fields.forEach(field => {
         const value = document.getElementById(field).value;
-        // Skip updating text for the 'university' field
-        if (field !== 'university') {
-            document.getElementById(field + 'Text').textContent = value;
+        document.getElementById(field + 'Text').textContent = value;
+        if (field === 'university') {
+            document.getElementById(field + 'Text').className = "text-[14px]";
+        } else {
+            document.getElementById(field + 'Text').className = "text-[12px]";
         }
         document.getElementById(field + 'Text').className = field === 'university' ? "text-[14px]" : "text-[12px]";
     });
@@ -40,7 +42,7 @@ function updateContent() {
             const logoImg = document.createElement('img');
             logoImg.src = logoSrc;
             logoImg.alt = selectedUniversity + " Logo";
-            logoImg.className = "p-4 max-w-[200px] max-h-[150px] mx-auto";
+            logoImg.className = "p-4 max-w-[200px] mx-auto";
             logoContainer.appendChild(logoImg);
         }
     }
