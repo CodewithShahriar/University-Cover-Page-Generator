@@ -17,35 +17,35 @@ function updateContent() {
     const fields = ['university', 'department', 'courseTitle', 'courseCode', 'coverType', 'coverTitle', 'teacherName', 'designation', 'teacherDepartment', 'studentName', 'studentId', 'studentBatch', 'section', 'session'];
     fields.forEach(field => {
         const value = document.getElementById(field).value;
-        document.getElementById(field + 'Text').textContent = value;
-        if (field === 'university') {
-            document.getElementById(field + 'Text').className = "text-[14px]";
-        } else {
-            document.getElementById(field + 'Text').className = "text-[12px]";
+        // Skip updating text for the 'university' field
+        if (field !== 'university') {
+            document.getElementById(field + 'Text').textContent = value;
         }
+        document.getElementById(field + 'Text').className = field === 'university' ? "text-[14px]" : "text-[12px]";
     });
 
     const submissionDate = document.getElementById('submissionDate').value;
     const formattedDate = submissionDate ? formatDate(submissionDate) : '';
     document.getElementById('submissionDateText').textContent = formattedDate;
 
-    const selectedUniversity = document.getElementById('university').value
+    const selectedUniversity = document.getElementById('university').value;
     const logoContainer = document.getElementById('logoContainer');
     const selectedOption = Array.from(document.getElementById('universityList').options).find(option => option.value === selectedUniversity);
 
     logoContainer.innerHTML = '';
 
-    if(selectedOption) {
+    if (selectedOption) {
         const logoSrc = selectedOption.getAttribute('data-logo');
-        if(logoSrc) {
+        if (logoSrc) {
             const logoImg = document.createElement('img');
-            logoImg.src = logoSrc
+            logoImg.src = logoSrc;
             logoImg.alt = selectedUniversity + " Logo";
             logoImg.className = "p-4 max-w-[200px] max-h-[150px] mx-auto";
             logoContainer.appendChild(logoImg);
         }
     }
 }
+
 
 function allFieldsFilled() {
     const requiredFields = ['university', 'department', 'courseTitle', 'courseCode', 'coverType', 'coverTitle', 'teacherName', 'designation', 'teacherDepartment', 'studentName', 'studentId', 'studentBatch', 'section', 'session', 'submissionDate'];
